@@ -417,8 +417,30 @@
         </div>
     </div>
     
-
+    <button id="backToTopBtn" title="Voltar" class="btn btn-dark rounded-circle">
+    <i class="bi bi-arrow-up"></i>
+</button>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+    const btn = document.getElementById("backToTopBtn");
+    const filmesSection = document.getElementById("filmes");
+
+    window.addEventListener("scroll", () => {
+        const rect = filmesSection.getBoundingClientRect();
+        const dentroDaTela = rect.top < 0 && rect.bottom > window.innerHeight;
+
+        if (dentroDaTela) {
+            btn.style.display = "flex"; // aparece
+        } else {
+            btn.style.display = "none"; // some
+        }
+    });
+
+    btn.addEventListener("click", () => {
+        filmesSection.scrollIntoView({ behavior: "smooth" });
+    });
+</script>
 </body>
 
 </html>
