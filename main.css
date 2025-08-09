@@ -1,0 +1,93 @@
+.bangers-regular {
+    font-family: "Bangers", system-ui;
+    font-weight: 400; 
+    font-style: normal;
+}
+
+.background {
+    background-image: url(./images/adicionais/netflixfundo.png);
+    background-repeat: no-repeat;         /* Impede a repetição da imagem */
+    background-size: cover;               /* Ajusta a imagem para cobrir todo o elemento */
+    background-position: center;          /* Centraliza a imagem */
+    position: relative;                   /* Necessário para aplicar camada sobre a imagem */
+}
+
+.background::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Cor preta com transparência (pode mudar) */
+    z-index: 0;                           /* Fica atrás do conteúdo */
+}
+
+.background > * {
+    position: relative;
+    z-index: 1; /* Coloca o conteúdo acima da camada escura */
+}
+
+.titulos{
+    font-family: "Bangers", system-ui;
+}
+
+.cormenu{
+    color: black;
+}
+
+.color-geral{
+    color: #fff;
+}
+
+.navbar{
+    background-color: rgb(77, 77, 80);
+}
+
+#cabecalho .nav .nav-link.active{
+    background-color: #000000;
+    color:  rgb(203, 204, 207);
+}
+
+#cabecalho .nav .nav-link.active,
+.navbar-brand,
+.navbar-brand:hover,
+.nav-filmes .nav-link.nav-link.active:hover{
+    color: #fff;
+}
+
+.social-links li{
+    list-style: none;
+    display: inline;
+}
+
+.social-links a{
+    text-decoration: none;
+}
+
+.text-colored{
+    color: rgb(216, 211, 211);
+}
+
+.img-destaque {
+  width: 400px;    
+  height: 500px;   
+  object-fit: cover;  
+  border-radius: 8px;
+}
+
+@media (max-width: 767px) {
+    .carousel-item img{
+        height: 280px;
+    }
+}
+
+@media (max-width: 1280px) and (min-width: 768px){
+        #destaques .col-md-3 {
+        flex: 0 0 50%;  
+        max-width: 50%;
+    }
+
+    #filmes .col-md-3{
+        flex: 0 0 50%;  
+        max-width: 50%;
+    }
+
+}
