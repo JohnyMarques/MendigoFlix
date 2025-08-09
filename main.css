@@ -6,23 +6,23 @@
 
 .background {
     background-image: url(./images/adicionais/netflixfundo.png);
-    background-repeat: no-repeat;         /* Impede a repetição da imagem */
-    background-size: cover;               /* Ajusta a imagem para cobrir todo o elemento */
-    background-position: center;          /* Centraliza a imagem */
-    position: relative;                   /* Necessário para aplicar camada sobre a imagem */
+    background-repeat: no-repeat;        
+    background-size: cover;               
+    background-position: center;          
+    position: relative;                   
 }
 
 .background::before {
     content: "";
     position: absolute;
     inset: 0;
-    background-color: rgba(0, 0, 0, 0.7); /* Cor preta com transparência (pode mudar) */
-    z-index: 0;                           /* Fica atrás do conteúdo */
+    background-color: rgba(0, 0, 0, 0.7); 
+    z-index: 0; 
 }
 
 .background > * {
     position: relative;
-    z-index: 1; /* Coloca o conteúdo acima da camada escura */
+    z-index: 1; 
 }
 
 .titulos{
@@ -80,7 +80,7 @@
     bottom: 20px;
     right: 20px;
     z-index: 9999;
-    display: none; /* escondido por padrão */
+    display: none; 
     width: 50px;
     height: 50px;
     justify-content: center;
