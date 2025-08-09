@@ -66,12 +66,16 @@
     color: rgb(216, 211, 211);
 }
 
+
+
 .img-destaque {
   width: 400px;    
   height: 500px;   
   object-fit: cover;  
   border-radius: 8px;
 }
+
+
 
 @media (max-width: 767px) {
     .carousel-item img{
